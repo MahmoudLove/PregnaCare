@@ -1,0 +1,117 @@
+@import "base.scss";
+
+.secsearch {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__input-box {
+    text-align: center;
+  }
+  &__label {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+  }
+  &__input {
+    width: 90%;
+    height: 4rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      height: 5rem;
+      width: 95%;
+    }
+  }
+  &__btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    background-color: var(--color-primary);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    color: #fff;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(1.1) rotateX(360deg);
+    }
+  }
+  &__datalist {
+  }
+}
+.drugs__info {
+  text-align: right;
+  &-priheader {
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &-btn {
+    background: transparent;
+    width: 100%;
+    border: none;
+    background-color: var(--color-grey-dark-1);
+    color: #fff;
+    text-align: right;
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+
+    &::before {
+      content: "\002B";
+      display: inline-block;
+      font-size: 4rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 3%;
+    }
+    &::after {
+      content: "\002D";
+      font-size: 4rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 3%;
+      display: none;
+    }
+  }
+  &-btn-container {
+    position: relative;
+  }
+  &-btn:hover {
+    background-color: var(--color-grey-dark-4);
+    color: var(--color-grey-light-3);
+  }
+  &-img-box {
+    background-color: var(--color-grey-light-1);
+    border: 2px solid var(--color-grey-dark-1);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: all 0.2s;
+    width: 100%;
+  }
+
+  &-img {
+    width: 100%;
+  }
+}
+.open .drugs__info-btn::before {
+  display: none;
+}
+.open .drugs__info-btn::after {
+  display: inline-block;
+}
+
+.open .drugs__info-img-box {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}

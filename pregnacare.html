@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="gradution_photos/EPCAwh 1.png"
+    />
+
+    <link rel="stylesheet" href="css/pregnacare.css" />
+    <script defer src="js/pregnacare.js"></script>
+
+    <title>EPCA</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__img-box">
+          <img src="gradution_photos/EPCA 2.png" alt="" class="header__img" />
+        </div>
+        <div class="nav__box">
+          <nav class="nav">
+            <svg class="nav__close-icon">
+              <use xlink:href="symbol-defs.svg#icon-aircraft"></use>
+            </svg>
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="index.html" class="nav__list-item-link"> Home </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="" class="nav__list-item-link"> About </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="" class="nav__list-item-link"> Project </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="pregnacare.html" class="nav__list-item-link">
+                  PregnaCare
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="services.html" class="nav__list-item-link">
+                  services
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="" class="nav__list-item-link"> Drugs </a>
+              </li>
+            </ul>
+          </nav>
+          <form action="" class="nav__form">
+            <input
+              type="text"
+              class="nav__form-input"
+              placeholder="Search Here"
+            />
+            <svg class="nav__form__icon">
+              <use xlink:href="symbol-defs.svg#icon-magnifying-glass"></use>
+            </svg>
+          </form>
+        </div>
+        <svg class="header__icon">
+          <use xlink:href="symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </header>
+
+      <section class="drugs__intro">
+        <h1 class="drugs__intro-priheader">
+          غذاؤك المتوازن من أعظم الهدايا التي تقدمينها لطفلك” يفضل اتباع غذاء
+          صحي متوازن قبل الحمل؛ لأنه يساعد يف الحفاظ على صحة المرأة، كما يجب أن
+          تتأكد المرأة الحامل من حصولها على الغذاء المتوازن المكون من
+          الكربوهيدرات، والبروتين، والدهون، والفيتامينات، والمعادن للحفاظ على
+          صحتها وصحة جنينها
+        </h1>
+        <h3 class="drugs__intro-terheader">طب ليه الموضوع ضرورى كده.....؟؟؟</h3>
+        <ul class="drugs__intro-list">
+          <li class="drugs__intro-listitem">
+            &rarrc; تقلل من خطر العيوب الخلقية للطفل
+          </li>
+          <li class="drugs__intro-listitem">&rarrc;تحسن وظيفة المشيمة</li>
+          <li class="drugs__intro-listitem">
+            . &rarrc;تقلل من اكتئاب ما بعد الولادة
+          </li>
+          <li class="drugs__intro-listitem">
+            &rarrc;تحسن من صحة الأم الحامل والجنين
+          </li>
+          <li class="drugs__intro-listitem">&rarrc;تخفف التعب</li>
+          <li class="drugs__intro-listitem">
+            &rarrc;بناء عظام وخلايا الدم للجنين
+          </li>
+          <li class="drugs__intro-listitem">&rarrc;تقليل متاعب ومشاكل الحمل</li>
+          <li class="drugs__intro-listitem">
+            &rarrc;تعزيز المناعة للوقاية من الأمراض المعدية
+          </li>
+          <li class="drugs__intro-listitem">
+            &rarrc; الوقاية من الإصابة بأنيميا نقص الحديد
+          </li>
+          <li class="drugs__intro-listitem">
+            &rarrc; تقوية الجسد استعدادًا للولادة. تعزيز تكوين الحليب للرضاعة
+            الطبيعية
+          </li>
+        </ul>
+        <h3 class="drugs__intro-terheader">.....التحكم بالوزن اثناء الحمل</h3>
+        <p class="drugs__intro-paragraph">
+          تختلف زيادة الوزن الصحية حسب مؤشر كتلة جسم الأم وصحتها قبل الحمل
+        </p>
+        <p class="drugs__intro-paragraph">
+          لحساب مؤشر كتلة الجسم اضغط
+          <a href="" class="drugs__intro-link" onsubmit="return false">هنا</a>
+        </p>
+        <div class="bmi-container">
+          <form class="bmi_form" onsubmit="return calcBMI();">
+            <h1 class="calculator_header">مؤشر كتلة الجسم</h1>
+            <div class="card_header">Calculate your BMI</div>
+            <div class="bmi-row">
+              <label>
+                <input
+                  type="radio"
+                  class="vmi-radio bmi-metric"
+                  name="bmi-measure"
+                  onchange="measureBMI()"
+                  checked
+                />
+                <span class="system-label">Metric</span>
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  class="bmi-radio bmi-imperial"
+                  name="bmi-measure"
+                  onchange="measureBMI()"
+                />
+                <span class="system-label">Imperial</span>
+              </label>
+            </div>
+
+            <div class="inputs_container">
+              <div class="weight_container">
+                <label class="bmi-label"> Weight </label>
+                <input
+                  id="bmi-weight"
+                  type="number"
+                  min="1"
+                  max="635"
+                  required
+                  placeholder="KG"
+                />
+              </div>
+
+              <div class="weight_container">
+                <label class="bmi-label">Height</label>
+                <input
+                  id="bmi-height"
+                  type="number"
+                  min="54"
+                  max="272"
+                  required
+                  placeholder="CM"
+                />
+              </div>
+            </div>
+
+            <input class="bmi_btn" type="submit" value="Calculate BMI" />
+          </form>
+
+          <p class="bmi-results"></p>
+        </div>
+
+        <div class="drugs__intro-img-box">
+          <img
+            src="gradution_photos/bmi_pic.jpg"
+            alt=""
+            class="drugs__intro-img"
+          />
+        </div>
+        <h3 class="drugs__intro-terheader">:السعرات الحرارية</h3>
+        <p class="drugs__intro-paragraph">
+          تجب مناقشة الاحتياج اليومي من السعرات الحرارية بشكل عام مع الطبيب؛ حيث
+          إن كل امرأة تختلف عن الأخرى، ولكن أثناء الحمل تكون الزيادة كالتالي
+        </p>
+
+        <ul class="drugs__intro-list">
+          <li class="drugs__intro-listitem">
+            &rarrc; خلال الثلث الأول من الحمل: لا تتغير عن احتياج المرأة قبل
+            الحمل
+          </li>
+          <li class="drugs__intro-listitem">
+            &rarrc; خلال الثلثين الثاني والثالث من الحمل: تحتاج إلى إضافة 300
+            سعرة حرارية
+          </li>
+        </ul>
+        <h3 class="drugs__intro-terheader">تأثير السمنة في الحمل:</h3>
+        <p class="drugs__intro-paragraph">
+          إذا كان مؤشر كتلة الجسم أعلى من الطبيعي أو وصل إلى مرحلة السمنة، فإن
+          ذلك يؤثر بشكل سلبي في الحمل، حيث تزداد احتمالية إصابة المرأة بالمشاكل
+          التالية:
+        </p>
+
+        <ul class="drugs__intro-list">
+          <li class="drugs__intro-listitem noheart">&times; سكري الحمل.</li>
+          <li class="drugs__intro-listitem noheart">&times;ارتفاع ضغط الدم</li>
+          <li class="drugs__intro-listitem noheart">&times; تسمم الحمل</li>
+          <li class="drugs__intro-listitem noheart">&times;الولادة المبكرة</li>
+          <li class="drugs__intro-listitem noheart">
+            &times; الولادة القيصرية
+          </li>
+        </ul>
+        <p class="drugs__intro-paragraph">
+          بالإضافة إلى أن المواليد قد يصابون بالمشاكل التالية:
+        </p>
+        <ul class="drugs__intro-list">
+          <li class="drugs__intro-listitem noheart">&times; العيوب الخلقية</li>
+          <li class="drugs__intro-listitem noheart">
+            &times; كبر حجم الجنين (العملقة)، مع احتمالية حدوث إصابات أثناء
+            الولادة
+          </li>
+          <li class="drugs__intro-listitem noheart">
+            &times; السمنة في مرحلة الطفولة
+          </li>
+        </ul>
+      </section>
+      <section class="drugs__info">
+        <h1 class="drugs__info-priheader">دليل الغذاء الصحى للمراه الحامل</h1>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">الكربوهيدرات</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر: الخبز والحبوب: الخبز، والأرز، وحبوب الإفطار، والشوفان،
+              والمعكرونة، والبرغل، والجريش. الخضروات النشوية: البطاطس، والبطاطا
+              الحلوة، والذرة، والجزر. الفواكه. الحليب ومنتجات الألبان.
+              البقوليات: الحمص، الفول، العدس، الفاصوليا ومنتجاتها
+            </p>
+            <p class="drugs__info-paragraph">الاهميه :مصادر رئيسية للطاقة</p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">البروتين</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر: البروتين الحيواين: مجموعة الحليب ومنتجات الألبان،
+              واللحوم، والدجاج، والسمك، والبيض . البروتين النبايت: المكسرات.
+              البقوليات: الحمص، الفول، العدس، الفاصوليا ومنتجاتها.
+            </p>
+            <p class="drugs__info-paragraph">
+              الاهميه :حتاج المرأة الحامل للبروتين لنمو وتطور خلايا وأنسجة
+              الطفل، وتكوين الجهاز العصبي.
+            </p>
+            <p class="drugs__info-paragraph">
+              النصائح: تناولى الأطعمة الغنية بمصادر فيتامين (ج) مع مصادر
+              البروتين النباتية والتي تساعد على امتصاص الحديد. - تناويل السمك
+              مرتان يف الأسبوع. وتأكدي من اختيار الأنواع التي تحتوي على نسبة
+              قليلة من الزئبق.
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">الدهون</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:الدهون غير المشبعة: زيت الزيتون، والأفوكادو، والفول
+              السوداين، وزبدة الفول السوداين، والمكسرات، وزيت الذرة، وزيت دوار
+              الشمس. الدهون المشبعة: الشحوم والدهون الحيوانية، والزبدة، والسمن،
+              وزيت النخيل. الدهون المتحولة: الموجودة بالأغذية المصنعة والجاهزة،
+              والوجبات السريعة
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه : مهمة لامتصاص الفيتامينات الذائبة يف الدهون
+            </p>
+            <p class="drugs__info-paragraph">
+              النصائح: التقليل/ الابتعاد عن كثرة استهلاك الدهون الحيوانية،
+              والدهون المشبعة، والدهون المتحولة
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">الكالسيوم</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:اللوز، والسبانخ، والبروكلي، وحليب الصويا، ومجموعة الألبان
+            </p>
+            <p class="drugs__info-paragraph">
+              الاهميه : لجنين يحتاج الكالسيوم لبناء عظام قوية وأسنان، ولنمو
+              القلب، والعضلات، والأعصاب، وتنظيم ضربات القلب وعملية تخثر الدم.
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">الحديد</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:اللحوم، والخضراوات الورقية، والكرنب، والفاصوليا، وبذور
+              اليقطين، والتين، والمشمش المجفف، والبقدونس.
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه : يساعد الحديد يف نقل الأكسجين بين الخلايا، وزيادة حجم
+              الدم ومنع فقر الدم
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">حمض الفوليك</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:العدس، والحليب، والخضروات، وصفار البيض، والبقوليات،
+              والأفوكادو، والفواكه الحمضية، والبذور، والمكسرات.
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه : يساهم يف تحقيق النمو الطبيعي للخلايا خلال مرحلة الحمل،
+              ويحافظ على صحة دماغ الطفل، والحد من مخاطر العيوب الخلقية، وتكوين
+              كريات الدم الحمراء.
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">اليود</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:منتجات الألبان، والخضروات، والفواكه، البيض، وسمك التونة.،
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه : ً يلعب دوراً هاما يف تنظيم عمل الغدة الدرقية والتمثيل
+              الغذايئ، ويساعد اليود ً يف تطوير الدماغ والجهاز العصبي أيضا
+              للطفل.،
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">الزنك</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:الخضراوات الورقية، وبذور اليقطين، وبذور السمسم، والعدس،
+              واللوز، والحبوب الكاملة، واللحوم..،
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه : الزنك يساعد يف تجديد وظائف الحمض النووي، والنمو الطبيعي
+              أثناء الحمل. كما يساعد يف دعم الجهاز المناعي، والتئام الجروح.
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">فيتامين (ج</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:الشمام، والبرتقال، والبروكلي، والفلفل الأخضر، والملفوف
+              الأحمر، والكيوي، والفراولة، والطماطم،
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه :يعد ضروريا لإنتاج الكولاجين ولنمو العظام وصحة الجلد،
+              والتئام الجروح، ً يف مكافحة العدوى، كما يساعد أيضا وحماية الخلايا
+              من التلف
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">فيتامين (أ)</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:الأسماك، واللحوم، ومنتجات الحليب، والأجبان، والبيض،
+              والجزر، والسبانخ، والفلفل الأحمر والأصفر، والبطاطا الحلوة،
+              والخضراوات الورقية، واليقطين.
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه :يلعب دوراً هاما يف تعزيز مناعة المرأة الحامل، ويف تطور
+              ونمو أعضاء الجنين وهيكله العظمي، وضمان النمو السليم للجنين.،
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">فيتامين (د)</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:عصير البرتقال المدعم، والحبوب المدعمة، وحليب الصويا،
+              والبيض، وسمك التونة، والسلمون، والحليب ّ المدعم.،
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه :يساعد على الحفاظ على مستويات مناسبة من الكالسيوم
+              والفوسفور، والتي تساعد على بناء عظام وأسنان الطفل والحامل.
+            </p>
+          </div>
+        </div>
+        <div class="collapse-container">
+          <div class="drugs__info-btn-container">
+            <button class="drugs__info-btn">فيتامين ب (6</button>
+          </div>
+          <div class="drugs__info-paragraph-box">
+            <p class="drugs__info-paragraph">
+              المصادر:اللحوم، والدجاج، والأسماك، والحمص، والحبوب الكاملة، ّ
+              والمكسرات، والموز، والبطاطا، والحبوب ّ المدعمة.،
+            </p>
+
+            <p class="drugs__info-paragraph">
+              الاهميه :يساعد الجسم على التمثيل الغذايئ للبروتينات والدهون
+              والكربوهيدرات. كما أنه يساعد يف تكوين خلايا الدم الحمراء الجديدة،
+              والأجسام المضادة، والناقلات العصبية، وتطوير دماغ الجنين والجهاز
+              العصبي
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="secprob">
+        <h2 class="secprob__secheader">
+          أعراض الاضطرابات بسبب الحمل تختلف من امرأة لأخرى، وفيما يلي بعض
+          المشكلات الصحية التي قد تتعرض لها المرأة الحامل
+        </h2>
+        <div class="secprob__box">
+          <div class="secprob__list-box">
+            <h3 class="secprob__triheader">النصائح</h3>
+            <ul class="secprob__list">
+              <li class="secprob__list-item">
+                تناول عدة وجبات صغيرة بدلاً من ثلاث وجبات كبيرة خلال اليوم .
+                تناول الخبز المحمص الجاف، والبسكوت، أو حبوب الإفطار الجافة يف
+                الصباح. تناول الأطعمة المنخفضة الدهون وسهلة الهضم، مثل الحبوب،
+                والأرز، والموز. الابتعاد عن الأطعمة ذات الروائح القوية.
+              </li>
+            </ul>
+          </div>
+          <div class="secprob__list-box">
+            <h3 class="secprob__triheader">المشكله</h3>
+            <ul class="secprob__list">
+              <li class="secprob__list-item">
+                غثيان الصباح: أغلب الحوامل يعانين من الغثيان والقيء ً يف الأشهر
+                الثلاثة الأوىل عند الصباح أحيانا ً (غثيان الصباح). قد يستمر
+                وتسمى أيضا الغثيان والقيء طوال فترة الحمل بسبب التغيرات يف
+                مستويات الهرمون.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h2 class="secprob__secheader">
+          الاعتقادات الغذائية الخاطئة التي قد تضر المرأة الحامل
+        </h2>
+        <table>
+          <tr>
+            <th>الحقيقه</th>
+            <th>الاعتقاد</th>
+          </tr>
+          <tr>
+            <td>
+              الحامل تحتاج إىل زيادة يف الاحتياجات اليومية، من 300 - 400 سعرة
+              حرارية إضافية فقط لكل يوم مع بداية الثلث الثاين من الحمل.
+            </td>
+            <td>جب تناول ضعف الطعام (عن اثنين)</td>
+          </tr>
+          <tr>
+            <td>
+              الحامل التي لا تكسب ما يكفي من الوزن خلال فترة الحمل معرضة لخطر
+              الولادة المبكرة أو طفل ناقص الوزن.
+            </td>
+            <td>عدم زيادة الوزن خلال الحمل يجعل الولادة أسهل!</td>
+          </tr>
+          <tr>
+            <td>
+              الحامل يمكن أن تتلهف لأي صنف من ّ الطعام ولكن يجب ألا تكون الرغبة
+              الشديدة هي المؤشر الوحيد للاحتياجات الغذائية.
+            </td>
+            <td>النساء الحوامل يتلهفن فقط لاحتياجاتهن من الأطعمة.</td>
+          </tr>
+          <tr>
+            <td>
+              الحرقة، والإمساك، والغثيان تصيب بعض النساء بغض النظر عن مستوى
+              الصحة
+            </td>
+            <td>الحامل التي تتمتع بصحة جيدة لن تتعرض لأي مشاكل خلال الحمل!</td>
+          </tr>
+        </table>
+        <h2 class="secprob__secheader">
+          الأطعمة التي يجب أن تتجنبها المرأة الحامل
+        </h2>
+        <ul class="secprob__list">
+          <li class="secprob__list-item-info">الأطعمة المدخنة.</li>
+          <li class="secprob__list-item-info">
+            تجنب تناول السمك النيء أو المحار غير المطبوخ الذي قد يحتوي على
+            الجراثيم (البكتيريا، الفيروسات أو الطفيليات).
+          </li>
+          <li class="secprob__list-item-info">
+            الأطعمة أو المشروبات التي تحتوي على البيض النيئ، لاحتوائها على
+            بكتيريا تدعى السالمونيلا مثل المايونيز، والكريما، وغيرها.
+          </li>
+          <li class="secprob__list-item-info">السلطات الجاهزة</li>
+          <li class="secprob__list-item-info">
+            . منتجات الألبان غير المبسترة، والتي قد تحتوي على الجرثومة
+            الليستيرية المستوحدة والتي تسبب اجهاض الجنين.
+          </li>
+          <li class="secprob__list-item-info">
+            الإفراط يف تناول الكبدة بكميات كبيرة.
+          </li>
+          <li class="secprob__list-item-info">
+            جميع أنواع البراعم مثل: ، وبراعم البروكلي، وبراعم البصل،وفول الصويا
+            (النيئ أو المطبوخ)
+          </li>
+          <li class="secprob__list-item-info">
+            المأكولات البحرية والأسماك الكبيرة التي تحتوي على مستويات عالية من
+            الزئبق
+          </li>
+          <li class="secprob__list-item-info">
+            الحد من تناول سمك التونة والا يزيد على أربع علب متوسطة الحجم (وزن
+            الصافي = 140 جرامًا لكل علبة) في الأسبوع.
+          </li>
+          <li class="secprob__list-item-info">
+            الكافيين: وهي مادة توجد بشكل طبيعي في الأطعمة (مثل: الشاي، والقهوة،
+            والشوكولاته)، وبعض المشروبات الغازية، مشروبات الطاقة أو بعض
+            المسكنات، وينصح بالحد من تناوله أثناء الحمل، حيث إن كثرته تزيد خطر
+            حدوث الإجهاض وانخفاض وزن الطفل عند الولادة.
+          </li>
+        </ul>
+        <h2 class="secprob__secheader">الطبق الصحي للحامل</h2>
+        <ul class="secprob__list">
+          <li class="secprob__list-item-heart">
+            الماء: من 8 إىل 12 كوب. اشريب الماء بشكل أساسي، كما يمكنك شرب القهوة
+            والشاي بدون كافيين، والمشروبات السكرية.
+          </li>
+          <li class="secprob__list-item-heart">
+            الحليب ومنتجات الألبان: تناويل 2-3 حصص يومية من حليب قليل الدسم، أو
+            منتجات الألبان
+          </li>
+          <li class="secprob__list-item-heart">
+            البروتين: 3 عدد الحصص اليومية اختاري مصادر البروتين مثل الدجاج،
+            والبقوليات، والمكسرات، والمأكولات البحرية منخفضة الزئبق، والبيض،
+            والتوفو أو الجبن قليل الدسم. قللي من تناول اللحوم الحمراء وتجنبي
+            اللحوم المعالجة واللحوم المصنعة الأخرى
+          </li>
+          <li class="secprob__list-item-heart">
+            الخضروات غير النشوية: 3-4 عدد الحصص اليومية اختاري كميات كبيرة،
+            ومجموعة متنوعة من الخضروات غير النشوية مثل الخضار الورقية،
+            والبروكلي، والجزر، والفلفل، والملفوف.
+          </li>
+          <li class="secprob__list-item-heart">
+            الحبوب الكاملة، البقوليات، والخضروات النشوية: 9 عدد الحصص اليومية
+            اختاري مجموعة متنوعة من الحبوب الكاملة مثل خبز القمح الكامل،
+            والمعكرونة، والأرز البني، والكينوا، والشوفان، وغيرها من الأطعمة
+            النشوية الصحية الأخرى مثل الفول والعدس، والبطاطا الحلوة، والقرع.
+            قللي من تناول الأطعمة المكررة مثل الخبز الأبيض، والأرز الأبيض،
+            والبطاطا المقلية.
+          </li>
+          <li class="secprob__list-item-heart">
+            الفواكه: 2-3 عدد الحصص اليومية اختاري مجموعة متنوعة من الفواكه، قللي
+            من تناول العصائر والفواكه المجففة. تعتبر الفواكه اختيار جيد للوجبات
+            الخفيفة أو للتحلية.
+          </li>
+          <li class="secprob__list-item-heart">
+            ارسي الرياضة إن أمكن ً لمدة 30 دقيقة يوميا
+          </li>
+          <li class="secprob__list-item-heart">
+            تخزين الأطعمة النيئة والمطبوخة بصورة منفصلة، وعدم استخدام نفس
+            الأدوات، مثل السكاكين وألواح التقطيع.
+          </li>
+          <li class="secprob__list-item-heart">
+            عدم تذويب الأغذية المجمدة من خلال تركها يف درجة حرارة الغرفة طوال
+            اليوم.
+          </li>
+          <li class="secprob__list-item-heart">
+            غسل الخضروات والفواكه جيداً قبل تناولها
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer__paragraph-box">
+        <p class="footer__paragraph">
+          <a
+            class="footer__mahmoud"
+            href="https://www.linkedin.com/in/mahmoud-abdelkhalek-37501b232"
+            target="_blank"
+          >
+            mahmoud abdelkhalek</a
+          >
+        </p>
+        <p class="footer__paragraph">@ all rights reserved</p>
+      </div>
+      <div class="footer__img-box">
+        <img src="gradution_photos/EPCAwh 1.png" alt="" class="footer__img" />
+      </div>
+      <div class="footer__img-box">
+        <img src="gradution_photos/clinical 1.png" alt="" class="footer__img" />
+      </div>
+      <div class="footer__img-box">
+        <img
+          src="gradution_photos/Alexandria_University_logo_1 1.png"
+          alt=""
+          class="footer__img"
+        />
+      </div>
+    </footer>
+  </body>
+</html>

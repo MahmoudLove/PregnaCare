@@ -1,0 +1,113 @@
+@import "base.scss";
+
+.secinfo {
+  &__header-primary {
+    font-size: 2rem;
+    color: var(--color-grey-dark-2);
+    text-align: center;
+    margin: 3rem 0;
+  }
+  &__header-secondary,
+  .secmap__header-secondary {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 3rem 0;
+    padding-left: 3rem;
+  }
+  &__form {
+    margin: 3rem auto;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 3rem;
+    &-btn {
+      background: transparent;
+      background-color: var(--color-primary);
+      border: none;
+      color: #fff;
+      padding: 1rem 2rem;
+      transform: skewY(0);
+    }
+    &-btn:hover {
+      animation: shakingbtn 0.3s infinite;
+    }
+    & > div {
+      margin-bottom: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & > label {
+        font-size: 2rem;
+      }
+    }
+  }
+  &__form-input {
+    font-size: 1.5rem;
+    height: 3rem;
+  }
+  &__form-input:focus {
+    outline: none;
+  }
+}
+
+@keyframes shakingbtn {
+  0% {
+    transform: skewY(10deg);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10deg);
+  }
+}
+
+.gradution__photo-box {
+  background-color: #875ea820;
+  text-align: center;
+  padding: 1rem;
+}
+.gradution__photo {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  @media (min-width: 37.5em) {
+    width: 40%;
+    height: 40%;
+  }
+  @media (min-width: 56.25em) {
+    width: 30%;
+    height: 30%;
+  }
+}
+.secmap {
+  &__header-primary {
+    font-size: 2rem;
+    color: var(--color-grey-dark-2);
+    text-align: center;
+    margin: 3rem 0;
+  }
+  &__header-secondary {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 3rem 0;
+    padding-left: 3rem;
+  }
+  &__form {
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+  }
+  &__form-select {
+    color: var(--color-grey-dark-3);
+    font-weight: 500;
+    font-size: 2rem;
+  }
+}
+.map {
+  max-width: 90%;
+  border-radius: 5px;
+  margin: 3rem auto;
+  height: 60rem;
+}

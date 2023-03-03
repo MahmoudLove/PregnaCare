@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="css/services.css" />
+    <script defer src="js/services.js"></script>
+    <title>EPCA</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__img-box">
+          <img src="gradution_photos/EPCA 2.png" alt="" class="header__img" />
+        </div>
+        <div class="nav__box">
+          <nav class="nav">
+            <svg class="nav__close-icon">
+              <use xlink:href="symbol-defs.svg#icon-aircraft"></use>
+            </svg>
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="index.html" class="nav__list-item-link"> Home </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="" class="nav__list-item-link"> About </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="" class="nav__list-item-link"> Project </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="pregnacare.html" class="nav__list-item-link">
+                  PregnaCare
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="services.html" class="nav__list-item-link">
+                  services
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a href="" class="nav__list-item-link"> Drugs </a>
+              </li>
+            </ul>
+          </nav>
+          <form action="" class="nav__form">
+            <input
+              type="text"
+              class="nav__form-input"
+              placeholder="Search Here"
+            />
+            <svg class="nav__form__icon">
+              <use xlink:href="symbol-defs.svg#icon-magnifying-glass"></use>
+            </svg>
+          </form>
+        </div>
+        <svg class="header__icon">
+          <use xlink:href="symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </header>
+      <section class="secinfo">
+        <h2 class="secinfo__header-primary">
+          You ‘ve a question / problem ? we can help you
+        </h2>
+        <h2 class="secinfo__header-secondary">Your informations</h2>
+        <form action="#" class="secinfo__form">
+          <div>
+            <label for="name">FULL NAME*</label
+            ><input
+              class="secinfo__form-input name"
+              type="text"
+              id="name"
+              placeholder="ex.Mahmoud Ashraf"
+              required
+              minlength="10"
+            />
+          </div>
+          <div>
+            <label for="month">MONTH*</label
+            ><input
+              class="secinfo__form-input month"
+              type="number"
+              id="month"
+              placeholder="ex.The 5th month"
+              required
+            />
+          </div>
+          <div>
+            <label for="problem">Your question/problem*</label
+            ><input
+              class="secinfo__form-input question"
+              type="text"
+              id="problem"
+              required
+              minlength="40"
+            />
+          </div>
+          <div>
+            <label for="phone">PHONE NUMBER*</label
+            ><input
+              class="secinfo__form-input number"
+              type="number"
+              id="phone"
+              maxlength="11"
+              required
+            />
+          </div>
+          <div>
+            <label for="adress">ADRESS*</label
+            ><input
+              class="secinfo__form-input adress"
+              type="text"
+              id="adress"
+              required
+              minlength="15"
+            />
+          </div>
+          <button class="secinfo__form-btn">SUBMIT</button>
+        </form>
+      </section>
+      <figure class="gradution__photo-box">
+        <img
+          src="gradution_photos/EPCA 2.png"
+          alt=""
+          class="gradution__photo"
+        />
+      </figure>
+      <section class="secmap">
+        <h2 class="secmap__header-primary">
+          Find out the nearest pregnancy centre
+        </h2>
+        <h2 class="secmap__header-secondary">Adress</h2>
+        <form action="" class="secmap__form">
+          <select name="" id="" class="secmap__form-select">
+            <option value="gleem">Alexanria, Gleem</option>
+            <option value="montazah">Alexanria,El Montazah</option>
+            <option value="moharem">Alexanria, Moharem bek</option>
+            <option value="dekhela">Alexanria, El Dekhela</option>
+            <option value="mandara">Alexanria, El Mandara</option>
+            <option value="seyof">Alexanria, El Seyof</option>
+            <option value="karmoz">Alexanria, El Karmoz</option>
+          </select>
+        </form>
+      </section>
+      <div class="map"></div>
+    </div>
+    <footer class="footer">
+      <div class="footer__paragraph-box">
+        <p class="footer__paragraph">
+          &copy; developed by
+          <a
+            class="footer__mahmoud"
+            href="https://www.linkedin.com/in/mahmoud-abdelkhalek-37501b232"
+            target="_blank"
+          >
+            mahmoud abdelkhalek</a
+          >
+        </p>
+        <p class="footer__paragraph">@ all rights reserved</p>
+      </div>
+      <div class="footer__img-box">
+        <img src="gradution_photos/EPCAwh 1.png" alt="" class="footer__img" />
+      </div>
+      <div class="footer__img-box">
+        <img
+          src="gradution_photos/clinical 1.png"
+          alt=""
+          class="footer__img footer__img-low"
+        />
+      </div>
+      <div class="footer__img-box">
+        <img
+          src="gradution_photos/Alexandria_University_logo_1 1.png"
+          alt=""
+          class="footer__img"
+        />
+      </div>
+    </footer>
+  </body>
+</html>

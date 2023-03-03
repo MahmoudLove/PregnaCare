@@ -1,0 +1,345 @@
+@import "base.scss";
+
+.drugs__intro {
+  text-align: right;
+  margin-bottom: 6rem;
+  margin-top: 1.5rem;
+
+  &-priheader {
+    font-size: 3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  &-terheader {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(var(--color-primary-light)),
+      to(var(--color-primary-dark))
+    );
+    background-image: linear-gradient(
+      to right,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  &-list {
+    padding: 1rem;
+    list-style: none;
+  }
+  &-listitem {
+    font-size: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+  &-listitem:after {
+    font-size: 2rem;
+    content: "❤";
+    color: red;
+    display: inline-block;
+  }
+  &-paragraph {
+    font-size: 2rem;
+    text-align: center;
+  }
+  &-link:link,
+  &-link:visited {
+    background-color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: all 0.3s;
+    text-shadow: var(--shadow-dark);
+    border-bottom: 1px solid var(--color-primary-dark);
+    padding: 0.5rem 1.5rem;
+    color: #fff;
+    border-radius: 5px;
+    margin: 2rem 0.8rem 0 0;
+  }
+  &-link:hover,
+  &-link:active {
+    transform: scale(1.1);
+    animation: shakingbtn 0.3s infinite;
+  }
+  &-img-box {
+    width: 90%;
+    margin: 2rem auto;
+    border: 2px solid var(--color-primary-light);
+    border-radius: 5px;
+  }
+  &-img {
+    width: 100%;
+    display: inline-block;
+  }
+  @keyframes shakingbtn {
+    0% {
+      transform: skewY(10deg);
+    }
+
+    50% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-10deg);
+    }
+  }
+
+  .noheart::after {
+    display: none !important;
+  }
+}
+
+.drugs__info {
+  text-align: right;
+  &-priheader {
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &-btn {
+    background: transparent;
+    width: 100%;
+    border: none;
+    background-color: var(--color-grey-dark-1);
+    color: #fff;
+    text-align: right;
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+
+    &::before {
+      content: "\002B";
+      display: inline-block;
+      font-size: 4rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 3%;
+    }
+    &::after {
+      content: "\002D";
+      font-size: 4rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 3%;
+      display: none;
+    }
+  }
+  &-btn-container {
+    position: relative;
+  }
+  &-btn:hover {
+    background-color: var(--color-grey-dark-4);
+    color: var(--color-grey-light-3);
+  }
+  &-paragraph-box {
+    background-color: var(--color-grey-light-1);
+    border: 2px solid var(--color-grey-dark-1);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: all 0.2s;
+  }
+
+  &-paragraph {
+    font-size: 3rem;
+    padding: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.open .drugs__info-btn::before {
+  display: none;
+}
+.open .drugs__info-btn::after {
+  display: inline-block;
+}
+
+.open .drugs__info-paragraph-box {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.calculator_header {
+  font-size: 3rem;
+  font-family: "El Messiri", sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.bmi_form {
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: max-content;
+  display: none;
+}
+.open .bmi_form {
+  display: flex;
+}
+.card_header {
+  font-size: 20px;
+  background-color: #007acc;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.system-label {
+  color: #007acc;
+}
+
+.bmi-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.bmi-radio {
+  margin-bottom: 1.5rem;
+}
+
+.inputs_container {
+  margin-top: 7px;
+  display: flex;
+  justify-content: space-around;
+  gap: 55px;
+  padding-inline: 10px;
+}
+
+.weight_container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.weight_container label {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.weight_container input {
+  border-radius: 5px;
+  border: 1px solid #525252;
+  outline: none;
+  height: 30px;
+  text-align: center;
+}
+
+.weight_container input::placeholder {
+  text-align: center;
+  font-weight: bold;
+}
+
+.bmi_btn {
+  align-self: center;
+  margin-block: 15px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #e07400;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+}
+
+.bmi-results {
+  background-color: var(--color-primary-light);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 17px;
+  border-radius: 5px;
+  display: none;
+}
+.secprob {
+  text-align: right;
+  margin: 3rem 0 3rem 0;
+  &__secheader {
+    font-size: 3rem;
+    text-align: center;
+    margin: 3rem 0 1.5rem 0;
+  }
+  &__box {
+    border: 1px solid #000;
+    display: flex;
+  }
+  &__list-box {
+    border: 1px solid #000;
+    flex-basis: 50%;
+    padding: 0.5rem;
+  }
+  &__triheader {
+    font-size: 2.3rem;
+    border-bottom: 1px solid #000;
+  }
+  &__list {
+    list-style: none;
+    padding: 1rem;
+  }
+  &__list-item {
+    font-size: 2rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #000;
+    }
+    &-info {
+      font-size: 2rem;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+        @media (min-width: 37.5em) {
+          margin-bottom: 1.5rem;
+        }
+      }
+      &::before {
+        content: "×";
+        display: inline-block;
+        font-size: 2rem;
+      }
+    }
+    &-heart {
+      font-size: 2rem;
+      border-bottom: 0.01px solid #0000002f;
+      @media (min-width: 37.5em) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #000;
+  padding: 1rem;
+  width: 50%;
+  text-align: right;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #b79ecb;
+  color: #fff;
+}
