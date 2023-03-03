@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="gradution_photos/anyrgb.com (2).png"
+    />
+    `
+    <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
       integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
@@ -28,7 +34,7 @@
         <div class="nav__box">
           <nav class="nav">
             <svg class="nav__close-icon">
-              <use xlink:href="symbol-defs.svg#icon-aircraft"></use>
+              <use xlink:href="symbol-defs.svg#icon-cross"></use>
             </svg>
             <ul class="nav__list">
               <li class="nav__list-item">
@@ -38,7 +44,12 @@
                 <a href="" class="nav__list-item-link"> About </a>
               </li>
               <li class="nav__list-item">
-                <a href="" class="nav__list-item-link"> Project </a>
+                <a
+                  href="https://instagram.com/epca_pregnacare?igshid=YmMyMTA2M2Y="
+                  class="nav__list-item-link"
+                >
+                  Project
+                </a>
               </li>
               <li class="nav__list-item">
                 <a href="pregnacare.html" class="nav__list-item-link">
@@ -98,7 +109,7 @@
             />
           </div>
           <div>
-            <label for="problem">Your question/problem*</label
+            <label for="problem">YOUR QUESTION / PROBLEM</label
             ><input
               class="secinfo__form-input question"
               type="text"
@@ -144,13 +155,14 @@
         <h2 class="secmap__header-secondary">Adress</h2>
         <form action="" class="secmap__form">
           <select name="" id="" class="secmap__form-select">
-            <option value="gleem">Alexanria, Gleem</option>
+            <option value="">Select Area</option>
+            <option value="glem">Alexanria, Gleem</option>
             <option value="montazah">Alexanria,El Montazah</option>
             <option value="moharem">Alexanria, Moharem bek</option>
             <option value="dekhela">Alexanria, El Dekhela</option>
             <option value="mandara">Alexanria, El Mandara</option>
-            <option value="seyof">Alexanria, El Seyof</option>
-            <option value="karmoz">Alexanria, El Karmoz</option>
+            <option value="seyof" disabled>Alexanria, El Seyof</option>
+            <option value="karmoz" disabled>Alexanria, El Karmoz</option>
           </select>
         </form>
       </section>
@@ -165,7 +177,7 @@
             href="https://www.linkedin.com/in/mahmoud-abdelkhalek-37501b232"
             target="_blank"
           >
-            mahmoud abdelkhalek</a
+            developed by: mahmoud abdelkhalek</a
           >
         </p>
         <p class="footer__paragraph">@ all rights reserved</p>

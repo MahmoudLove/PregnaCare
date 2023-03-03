@@ -6,7 +6,7 @@
   margin-top: 1.5rem;
 
   &-priheader {
-    font-size: 3rem;
+    font-size: 2.4rem;
     padding: 1rem;
     margin-bottom: 1rem;
   }
@@ -68,7 +68,7 @@
     animation: shakingbtn 0.3s infinite;
   }
   &-img-box {
-    width: 90%;
+    width: 60%;
     margin: 2rem auto;
     border: 2px solid var(--color-primary-light);
     border-radius: 5px;
@@ -155,6 +155,19 @@
       margin-bottom: 2rem;
     }
   }
+  &-img-box {
+    background-color: var(--color-grey-light-1);
+    border: 2px solid var(--color-grey-dark-1);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: all 0.2s;
+    width: 0;
+  }
+
+  &-img {
+    width: 100%;
+  }
 }
 
 .open .drugs__info-btn::before {
@@ -169,7 +182,15 @@
   visibility: visible;
   height: 100%;
 }
-
+.open .drugs__info-img-box {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  width: 100%;
+}
+.collapse-container {
+  margin: 0 0.5rem;
+}
 .calculator_header {
   font-size: 3rem;
   font-family: "El Messiri", sans-serif;

@@ -22,22 +22,42 @@ const areas = {
     ],
   },
   montazah: {
-    start: [],
-    startDes: [],
-    places: [],
-    description: [],
+    start: [31.23121241406471, 29.972433165068264],
+    startDes: "مكتب صحة - سان ستيفانو \ntel: 03 5846292",
+    places: [
+      [31.233611592809766, 29.97217099231851],
+      [31.239370901268913, 29.96455013823804],
+      [31.218545664974304, 29.985758412313768],
+      [31.268986504535484, 30.026728336359618],
+    ],
+    description: [
+      "مركز صحة الأسرة باكوس المحروسة قسم ثان رمل 035012054",
+      "مكتب صحة السيوف ٢٦ المنشار قسم تاني رمل 035014381",
+      "مركز  الأمل لصحة الأسرة عبد الحي العاقصة وباكوس قسم ثان الرمل الإسكندرية 03 3922635",
+      " مركز صحة الأسرة بحجر النواتية حجر النواتية Qesm AR Ramel",
+      " 03 5525001 العمراوي قسم ثان المنتزة الإسكندرية الإسكندرية مركز صحة أسرة العمراوي",
+    ],
   },
   moharem: {
-    start: [],
-    startDes: [],
-    places: [],
-    description: [],
+    start: [31.1946224, 29.9207885],
+    startDes: "العنوان: 8 الوزير، أمبروز ومحرم بك، محرم بك، الإسكندرية 5413455",
+
+    places: [31.1946224, 29.9207885],
+    description: [
+      "العنوان: 8 الوزير، أمبروز ومحرم بك، محرم بك، الإسكندرية 5413455",
+    ],
   },
   dekhela: {
-    start: [],
-    startDes: [],
-    places: [],
-    description: [],
+    start: [31.1359361, 29.8178008],
+    startDes: "العنوان : الدخيله كورنيش بجوار مدرسه بلال بن رباح ",
+    places: [
+      [31.1359361, 29.8178008],
+      [31.121043739082975, 29.791395650869628],
+    ],
+    description: [
+      ["العنوان: البيطاش الشارع الجديد شارع الشيخ احمد ياسين"],
+      "العنوان : الدخيله كورنيش بجوار مدرسه بلال بن رباح ",
+    ],
   },
   mandara: {
     start: [],
@@ -61,7 +81,7 @@ const areas = {
 
 inputArea.addEventListener("change", function () {
   const selectedArea = inputArea.value.toLowerCase();
-  console.log(selectedArea);
+  if (!selectedArea) return;
   map.setView(areas[selectedArea].start, 15, {
     animate: true,
     pan: {
@@ -117,8 +137,6 @@ const adress = document.querySelector(".adress");
 const submitBtn = document.querySelector(".secinfo__form-btn");
 
 submitBtn.addEventListener("click", function (e) {
-  console.log("btn haha");
-  console.log(submitBtn.textContent);
   e.preventDefault();
   const objToSend = {};
   objToSend.name = Hname.value;
@@ -126,12 +144,13 @@ submitBtn.addEventListener("click", function (e) {
   objToSend.question = question.value;
   objToSend.number = number.value;
   objToSend.adress = adress.value;
-  // if (Hname.value.length < 10 || !Hname.value) return;
-  // if (!month.value) return;
-  // if (question.value.length < 30 || !question.value) return;
-  // if (adress.value.length < 10 || !adress.value) return;
-  // if (number.value.length < 11 || !number.value || number.value.length > 13)
-  // return;
+  if (Hname.value.length < 10 || !Hname.value) return;
+  if (!month.value || month.value * 1 > 9 || month.value * 1 < 1) return;
+  if (question.value.length < 30 || !question.value) return;
+  if (adress.value.length < 10 || !adress.value) return;
+  if (number.value.length < 11 || !number.value || number.value.length > 13)
+    // return;
+    submitBtn.textContent = "Submitting";
   setTimeout(() => {
     submitBtn.textContent = "✓ Submitted";
     Hname.value =
@@ -142,4 +161,14 @@ submitBtn.addEventListener("click", function (e) {
         "";
   }, 2000);
   setTimeout(() => (submitBtn.textContent = "Submit agian"), 6000);
+});
+const headerIcon = document.querySelector(".header__icon");
+headerIcon.addEventListener("click", function (e) {
+  headerIcon.closest("header").classList.add("open");
+});
+
+const headerIconClose = document.querySelector(".nav__close-icon");
+
+headerIconClose.addEventListener("click", function (e) {
+  headerIconClose.closest("header").classList.remove("open");
 });

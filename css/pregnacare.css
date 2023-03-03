@@ -22,13 +22,14 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 50%; }
+  font-size: 50%;
+  font-family: "Cairo", sans-serif; }
   @media (min-width: 37.5em) {
     html {
       font-size: 56.25%; } }
 
 body {
-  min-width: 55rem;
+  min-width: 53rem;
   border-top: 0; }
 
 .container {
@@ -69,7 +70,7 @@ body {
   height: 115vh;
   visibility: visible;
   transform: translateX(0) translateY(45%);
-  padding-top: 10rem; }
+  margin: auto 0; }
 
 .nav {
   position: relative; }
@@ -99,7 +100,6 @@ body {
         gap: 1.5rem; } }
   .nav__list-item {
     font-size: 5rem;
-    margin-bottom: 2rem;
     flex: 0 0; }
     @media (min-width: 56.25em) {
       .nav__list-item {
@@ -277,7 +277,7 @@ body {
   margin-bottom: 6rem;
   margin-top: 1.5rem; }
   .drugs__intro-priheader {
-    font-size: 3rem;
+    font-size: 2.4rem;
     padding: 1rem;
     margin-bottom: 1rem; }
   .drugs__intro-terheader {
@@ -318,7 +318,7 @@ body {
     transform: scale(1.1);
     animation: shakingbtn 0.3s infinite; }
   .drugs__intro-img-box {
-    width: 90%;
+    width: 60%;
     margin: 2rem auto;
     border: 2px solid var(--color-primary-light);
     border-radius: 5px; }
@@ -385,6 +385,16 @@ body {
     padding: 2rem; }
     .drugs__info-paragraph:not(:last-child) {
       margin-bottom: 2rem; }
+  .drugs__info-img-box {
+    background-color: var(--color-grey-light-1);
+    border: 2px solid var(--color-grey-dark-1);
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: all 0.2s;
+    width: 0; }
+  .drugs__info-img {
+    width: 100%; }
 
 .open .drugs__info-btn::before {
   display: none; }
@@ -396,6 +406,15 @@ body {
   opacity: 1;
   visibility: visible;
   height: 100%; }
+
+.open .drugs__info-img-box {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  width: 100%; }
+
+.collapse-container {
+  margin: 0 0.5rem; }
 
 .calculator_header {
   font-size: 3rem;

@@ -21,13 +21,14 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 50%; }
+  font-size: 50%;
+  font-family: "Cairo", sans-serif; }
   @media (min-width: 37.5em) {
     html {
       font-size: 56.25%; } }
 
 body {
-  min-width: 55rem;
+  min-width: 53rem;
   border-top: 0; }
 
 .container {
@@ -68,7 +69,7 @@ body {
   height: 115vh;
   visibility: visible;
   transform: translateX(0) translateY(45%);
-  padding-top: 10rem; }
+  margin: auto 0; }
 
 .nav {
   position: relative; }
@@ -98,7 +99,6 @@ body {
         gap: 1.5rem; } }
   .nav__list-item {
     font-size: 5rem;
-    margin-bottom: 2rem;
     flex: 0 0; }
     @media (min-width: 56.25em) {
       .nav__list-item {
@@ -313,7 +313,8 @@ body {
     font-size: 4rem;
     font-weight: 500;
     text-align: center;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    margin-top: 3rem; }
   .drugs__info-btn {
     background: transparent;
     width: 100%;
@@ -350,8 +351,8 @@ body {
     opacity: 0;
     visibility: hidden;
     height: 0;
-    transition: all 0.2s;
-    width: 100%; }
+    transition: visibility 0.2s opacity 0.2s width 0s heiht 0s;
+    width: 0; }
   .drugs__info-img {
     width: 100%; }
 
@@ -364,4 +365,16 @@ body {
 .open .drugs__info-img-box {
   opacity: 1;
   visibility: visible;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
+
+.collapse-container {
+  margin: 0 0.5rem; }
+
+.advanced__info {
+  font-size: 2rem;
+  margin: 3rem 0 2rem 0;
+  text-align: center; }
+  .advanced__info-link:link, .advanced__info-link:visited {
+    color: var(--color-primary);
+    text-decoration: none; }

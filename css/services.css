@@ -21,13 +21,14 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 50%; }
+  font-size: 50%;
+  font-family: "Cairo", sans-serif; }
   @media (min-width: 37.5em) {
     html {
       font-size: 56.25%; } }
 
 body {
-  min-width: 55rem;
+  min-width: 53rem;
   border-top: 0; }
 
 .container {
@@ -38,17 +39,16 @@ body {
 
 .nav__box {
   height: 100vh;
-  min-height: 100%;
-  max-height: 100%;
   min-width: 100%;
+  min-height: 100%;
   position: fixed;
   background-color: var(--color-primary);
-  max-width: 100%;
   padding: 3rem;
   opacity: 0;
   visibility: hidden;
   transform: translateX(100%);
-  transition: all 0.4s; }
+  transition: all 0.4s;
+  z-index: 1000; }
   @media (min-width: 56.25em) {
     .nav__box {
       opacity: 1;
@@ -66,8 +66,10 @@ body {
 
 .open .nav__box {
   opacity: 1;
+  height: 115vh;
   visibility: visible;
-  transform: translateX(0); }
+  transform: translateX(0) translateY(45%);
+  margin: auto 0; }
 
 .nav {
   position: relative; }
@@ -97,7 +99,6 @@ body {
         gap: 1.5rem; } }
   .nav__list-item {
     font-size: 5rem;
-    margin-bottom: 2rem;
     flex: 0 0; }
     @media (min-width: 56.25em) {
       .nav__list-item {
@@ -189,7 +190,10 @@ body {
 .header__icon {
   height: 6rem;
   width: 6rem;
-  display: inline-block; }
+  display: inline-block;
+  fill: var(--color-primary); }
+  .header__icon:hover {
+    transform: scale(1.1); }
   @media (min-width: 56.25em) {
     .header__icon {
       display: none; } }
@@ -266,8 +270,6 @@ body {
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
     text-decoration: none;
     transition: all 1s; }
-  .footer__mahmoud:hover, .footer__mahmoud:active {
-    transform: scale(2); }
 
 .secinfo__header-primary {
   font-size: 2rem;
@@ -306,7 +308,8 @@ body {
       font-size: 2rem; }
 
 .secinfo__form-input {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  height: 3rem; }
 
 .secinfo__form-input:focus {
   outline: none; }
@@ -364,3 +367,6 @@ body {
   border-radius: 5px;
   margin: 3rem auto;
   height: 60rem; }
+
+.description {
+  font-size: 1.5rem; }

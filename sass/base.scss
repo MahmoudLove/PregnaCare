@@ -26,13 +26,15 @@
 
 html {
   font-size: 50%;
+  font-family: "Cairo", sans-serif;
+
   @media (min-width: 37.5em) {
     font-size: 56.25%;
   }
 }
 
 body {
-  min-width: 55rem;
+  min-width: 53rem;
   border-top: 0;
 }
 .container {
@@ -73,7 +75,8 @@ body {
   height: 115vh;
   visibility: visible;
   transform: translateX(0) translateY(45%);
-  padding-top: 10rem;
+  // padding-top: 10rem;
+  margin: auto 0;
 }
 .nav {
   position: relative;
@@ -105,7 +108,6 @@ body {
   }
   &__list-item {
     font-size: 5rem;
-    margin-bottom: 2rem;
     flex: 0 0;
     @media (min-width: 56.25em) {
       font-size: 3rem;

@@ -3,6 +3,7 @@ document
   .addEventListener("submit", function (e) {
     e.preventDefault();
     const query = document.querySelector(".secsearch__input").value;
+    if (!query) return;
     window.open(`https://www.drugs.com/pregnancy/${query}.html`);
   });
 
