@@ -15,6 +15,7 @@
     font-size: 3rem;
     margin-bottom: 2rem;
     display: inline-block;
+    margin-top: 2rem;
   }
   &__input {
     width: 90%;
@@ -36,13 +37,12 @@
     padding: 1rem 2rem;
     font-size: 2rem;
     color: #fff;
-    transition: all 0.5s;
+    transition: all 0.3s;
 
     &:hover {
-      transform: scale(1.1) rotateX(360deg);
+      transform: scale(1.1);
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.05);
     }
-  }
-  &__datalist {
   }
 }
 .drugs__info {
@@ -96,7 +96,7 @@
     opacity: 0;
     visibility: hidden;
     height: 0;
-    transition: visibility 0.2s opacity 0.2s width 0s heiht 0s;
+    transition: visibility 0.2s, opacity 0.2s, width 0s, height 0s;
     width: 0;
   }
 
@@ -128,5 +128,10 @@
   &-link:visited {
     color: var(--color-primary);
     text-decoration: none;
+    transition: all 0.3s;
+  }
+  &-link:hover,
+  &-link:active {
+    transform: scale(1.05);
   }
 }

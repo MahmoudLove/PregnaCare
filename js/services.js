@@ -26,6 +26,7 @@ const areas = {
     startDes: "مكتب صحة - سان ستيفانو \ntel: 03 5846292",
     places: [
       [31.233611592809766, 29.97217099231851],
+      [31.23121241406471, 29.972433165068264],
       [31.239370901268913, 29.96455013823804],
       [31.218545664974304, 29.985758412313768],
       [31.268986504535484, 30.026728336359618],
@@ -42,7 +43,7 @@ const areas = {
     start: [31.1946224, 29.9207885],
     startDes: "العنوان: 8 الوزير، أمبروز ومحرم بك، محرم بك، الإسكندرية 5413455",
 
-    places: [31.1946224, 29.9207885],
+    places: [[31.1946224, 29.9207885]],
     description: [
       "العنوان: 8 الوزير، أمبروز ومحرم بك، محرم بك، الإسكندرية 5413455",
     ],
@@ -59,30 +60,12 @@ const areas = {
       "العنوان : الدخيله كورنيش بجوار مدرسه بلال بن رباح ",
     ],
   },
-  mandara: {
-    start: [],
-    startDes: [],
-    places: [],
-    description: [],
-  },
-  seyof: {
-    start: [],
-    startDes: [],
-    places: [],
-    description: [],
-  },
-  karmoz: {
-    start: [],
-    startDes: [],
-    places: [],
-    description: [],
-  },
 };
 
 inputArea.addEventListener("change", function () {
   const selectedArea = inputArea.value.toLowerCase();
   if (!selectedArea) return;
-  map.setView(areas[selectedArea].start, 15, {
+  map.setView(areas[selectedArea].start, 14, {
     animate: true,
     pan: {
       duration: 1,
@@ -95,11 +78,11 @@ inputArea.addEventListener("change", function () {
       areas[selectedArea].description[i]
     );
   }
-  renderMarker(areas.glem.start, areas.glem.description[0]);
+  renderMarker(areas[selectedArea].start, areas[selectedArea].description[0]);
 });
 
 function loadMap(coords) {
-  map = L.map(mapEl).setView(coords, 15);
+  map = L.map(mapEl).setView(coords, 14);
 
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution:
@@ -159,8 +142,8 @@ submitBtn.addEventListener("click", function (e) {
       number.value =
       adress.value =
         "";
-  }, 2000);
-  setTimeout(() => (submitBtn.textContent = "Submit agian"), 6000);
+  }, 4000);
+  setTimeout(() => (submitBtn.textContent = "Submit again"), 6000);
 });
 const headerIcon = document.querySelector(".header__icon");
 headerIcon.addEventListener("click", function (e) {

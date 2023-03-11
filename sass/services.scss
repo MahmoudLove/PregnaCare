@@ -100,9 +100,11 @@
     text-align: center;
   }
   &__form-select {
-    color: var(--color-grey-dark-3);
     font-weight: 500;
     font-size: 2rem;
+  }
+  &__form-select:disabled {
+    color: var(--color-grey-dark-3);
   }
 }
 .map {

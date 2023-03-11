@@ -120,6 +120,7 @@ body {
       text-decoration: none;
       position: relative;
       z-index: 10;
+      transition: color 0.2s;
 
       &:before {
         content: "";
@@ -182,6 +183,7 @@ body {
     width: 3rem;
     display: inline-block;
     height: 3rem;
+
     fill: var(--color-grey-dark-3);
     @media (min-width: 56.25em) {
       display: inline-block;
@@ -329,8 +331,5 @@ body {
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
     text-decoration: none;
     transition: all 1s;
-  }
-  &__mahmoud:hover,
-  &__mahmoud:active {
   }
 }

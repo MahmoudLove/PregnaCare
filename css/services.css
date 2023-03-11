@@ -108,7 +108,8 @@ body {
       color: #000;
       text-decoration: none;
       position: relative;
-      z-index: 10; }
+      z-index: 10;
+      transition: color 0.2s; }
       .nav__list-item-link:link:before, .nav__list-item-link:visited:before {
         content: "";
         position: absolute;
@@ -358,9 +359,11 @@ body {
   text-align: center; }
 
 .secmap__form-select {
-  color: var(--color-grey-dark-3);
   font-weight: 500;
   font-size: 2rem; }
+
+.secmap__form-select:disabled {
+  color: var(--color-grey-dark-3); }
 
 .map {
   max-width: 90%;
